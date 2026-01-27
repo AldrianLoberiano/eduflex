@@ -57,7 +57,7 @@ A comprehensive full-stack educational platform built with Vue.js 3 and Spring B
 - Manage all courses and users
 - Platform administration tools
 
-### 📱 UI/UX
+### UI/UX
 
 - Fully responsive design
 - Modern and intuitive interface
