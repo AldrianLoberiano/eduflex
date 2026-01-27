@@ -2,9 +2,9 @@
 
 A comprehensive full-stack educational platform built with Vue.js 3 and Spring Boot, enabling course management, quiz creation, and student progress tracking.
 
-## ✨ Features
+## Features
 
-### 🔐 Authentication & Authorization
+### Authentication & Authorization
 
 - JWT-based secure authentication
 - Role-based access control (Student, Instructor, Admin)
@@ -12,7 +12,7 @@ A comprehensive full-stack educational platform built with Vue.js 3 and Spring B
 - Protected routes with navigation guards
 - Session management with token refresh
 
-### 📚 Course Management
+### Course Management
 
 - Browse and search published courses
 - Detailed course information with lessons
@@ -21,7 +21,7 @@ A comprehensive full-stack educational platform built with Vue.js 3 and Spring B
 - Publish/unpublish course visibility
 - Course categorization and organization
 
-### 📝 Quiz System
+### Quiz System
 
 - Interactive quiz creation and management
 - Multiple-choice question support
@@ -30,7 +30,7 @@ A comprehensive full-stack educational platform built with Vue.js 3 and Spring B
 - Automatic grading and scoring
 - Quiz results and performance tracking
 
-### 👨‍🎓 Student Features
+### Student Features
 
 - Personal learning dashboard
 - Course enrollment and progress tracking
@@ -39,7 +39,7 @@ A comprehensive full-stack educational platform built with Vue.js 3 and Spring B
 - Track completion percentage
 - Learning history and achievements
 
-### 👨‍🏫 Instructor Features
+### Instructor Features
 
 - Instructor dashboard with analytics
 - Create and manage multiple courses
@@ -49,7 +49,7 @@ A comprehensive full-stack educational platform built with Vue.js 3 and Spring B
 - Monitor student progress
 - Course publishing controls
 
-### 👑 Admin Features
+### Admin Features
 
 - System-wide user management
 - Content moderation capabilities
@@ -66,7 +66,7 @@ A comprehensive full-stack educational platform built with Vue.js 3 and Spring B
 - Loading states and error handling
 - Toast notifications
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend
 
@@ -86,7 +86,7 @@ A comprehensive full-stack educational platform built with Vue.js 3 and Spring B
 - **Hibernate** - ORM framework
 - **Maven** - Dependency management
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -97,7 +97,7 @@ A comprehensive full-stack educational platform built with Vue.js 3 and Spring B
 
 ---
 
-## 📊 Database Setup (PostgreSQL)
+## Database Setup (PostgreSQL)
 
 ### Option 1: Using pgAdmin (GUI)
 
@@ -152,7 +152,7 @@ spring:
     show-sql: true
 ```
 
-**⚠️ Important:** Update the password in `application.yml` to match your PostgreSQL installation.
+** Important:** Update the password in `application.yml` to match your PostgreSQL installation.
 
 ### Database Schema
 
@@ -181,7 +181,7 @@ Tables are automatically created by Hibernate on first run:
 
 ---
 
-## 🎯 Installation & Running
+## Installation & Running
 
 ### Backend Setup
 
@@ -255,7 +255,7 @@ The application initializes with default accounts (see `DataInitializer.java`):
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ### Frontend Structure
 
@@ -351,9 +351,9 @@ backend/
 
 ---
 
-## 👥 User Roles & Permissions
+## User Roles & Permissions
 
-### 👨‍🎓 Student Role
+### Student Role
 **Capabilities:**
 - Browse and search all published courses
 - View detailed course information and syllabus
@@ -371,7 +371,7 @@ backend/
 - Cannot access instructor or admin features
 - Can only view their own enrolled courses
 
-### 👨‍🏫 Instructor Role
+### Instructor Role
 **Capabilities:**
 - Access instructor dashboard with analytics
 - Create new courses with descriptions
@@ -390,7 +390,7 @@ backend/
 - Cannot access admin-level system settings
 - Cannot manage users (except viewing enrolled students)
 
-### 👑 Admin Role
+### Admin Role
 **Capabilities:**
 - Access to all system features
 - Manage all users (create, edit, delete, activate/deactivate)
@@ -473,7 +473,7 @@ The API uses standard HTTP status codes:
 
 ---
 
-## 📜 Available Scripts
+## Available Scripts
 
 ### Frontend Scripts
 
@@ -499,7 +499,7 @@ mvnw.cmd test                   # Run tests
 
 ---
 
-## 🎨 Features Overview
+## Features Overview
 
 ### Authentication System
 
@@ -556,7 +556,7 @@ mvnw.cmd test                   # Run tests
 
 ---
 
-## 🔧 Configuration
+## Configuration
 
 ### Frontend Environment Variables
 
@@ -618,7 +618,7 @@ cors:
 
 ---
 
-## 🧪 Testing
+## Testing
 
 ### Backend Testing
 
@@ -643,7 +643,7 @@ npm run test:coverage # Generate coverage report
 
 ---
 
-## 🚢 Deployment
+## Deployment
 
 ### Frontend Deployment
 
@@ -725,7 +725,7 @@ docker run -p 8080:8080 eduflex-backend
 
 ---
 
-## 🔍 Troubleshooting
+## Troubleshooting
 
 ### Database Connection Issues
 
@@ -789,7 +789,7 @@ Error: Could not resolve dependencies
 
 ---
 
-## 🌐 Browser Support
+## Browser Support
 
 | Browser | Version | Status             |
 | ------- | ------- | ------------------ |
@@ -802,7 +802,7 @@ Error: Could not resolve dependencies
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions! Please follow these steps:
 
@@ -840,69 +840,3 @@ We welcome contributions! Please follow these steps:
    - Reference any related issues
    - Wait for code review
 
-### Code Style Guidelines
-
-- **Java:** Follow Google Java Style Guide
-- **JavaScript:** Use ESLint configuration
-- **Vue:** Follow Vue.js Style Guide
-- **Commit Messages:** Use conventional commits format
-
----
-
-## 📝 License
-
-This project is part of the EduFlex educational platform.  
-© 2026 EduFlex. All rights reserved.
-
----
-
-## 📞 Support & Contact
-
-- **Issues:** [GitHub Issues](https://github.com/yourusername/eduflex/issues)
-- **Documentation:** Check our [Wiki](https://github.com/yourusername/eduflex/wiki)
-- **Email:** support@eduflex.com
-
----
-
-## 🎯 Roadmap
-
-### Phase 1 (Current)
-
-- ✅ User authentication and authorization
-- ✅ Course management system
-- ✅ Quiz creation and taking
-- ✅ Progress tracking
-- ✅ Role-based access control
-
-### Phase 2 (In Progress)
-
-- 🔄 Video lesson support
-- 🔄 File upload for course materials
-- 🔄 Discussion forums
-- 🔄 Real-time notifications
-- 🔄 Certificate generation
-
-### Phase 3 (Planned)
-
-- 📋 Live streaming classes
-- 📋 Payment integration
-- 📋 Mobile app (React Native)
-- 📋 Advanced analytics and reporting
-- 📋 Gamification features
-- 📋 Multi-language support
-- 📋 AI-powered recommendations
-
----
-
-## 🙏 Acknowledgments
-
-- **Spring Boot** - Backend framework
-- **Vue.js** - Frontend framework
-- **PostgreSQL** - Database system
-- **JWT.io** - Token implementation
-- **Vite** - Build tool
-- All open-source contributors
-
----
-
-**Built with ❤️ by the EduFlex Team**
