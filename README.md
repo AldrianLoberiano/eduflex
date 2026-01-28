@@ -839,4 +839,7 @@ We welcome contributions! Please follow these steps:
    - Describe your changes
    - Reference any related issues
    - Wait for code review
+     
+## License
 
+This project is for my personal project only.
