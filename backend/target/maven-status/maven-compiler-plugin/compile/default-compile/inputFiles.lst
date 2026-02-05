@@ -1,60 +1,60 @@
-C:\Users\Aldrian Loberiano\Documents\GitHub\educational_platform\eduflex\backend\src\main\java\com\eduflex\config\CorsConfig.java
-C:\Users\Aldrian Loberiano\Documents\GitHub\educational_platform\eduflex\backend\src\main\java\com\eduflex\config\DataInitializer.java
-C:\Users\Aldrian Loberiano\Documents\GitHub\educational_platform\eduflex\backend\src\main\java\com\eduflex\config\SecurityConfig.java
-C:\Users\Aldrian Loberiano\Documents\GitHub\educational_platform\eduflex\backend\src\main\java\com\eduflex\controller\AdminController.java
-C:\Users\Aldrian Loberiano\Documents\GitHub\educational_platform\eduflex\backend\src\main\java\com\eduflex\controller\AuthController.java
-C:\Users\Aldrian Loberiano\Documents\GitHub\educational_platform\eduflex\backend\src\main\java\com\eduflex\controller\CourseController.java
-C:\Users\Aldrian Loberiano\Documents\GitHub\educational_platform\eduflex\backend\src\main\java\com\eduflex\controller\HealthController.java
-C:\Users\Aldrian Loberiano\Documents\GitHub\educational_platform\eduflex\backend\src\main\java\com\eduflex\controller\InstructorController.java
-C:\Users\Aldrian Loberiano\Documents\GitHub\educational_platform\eduflex\backend\src\main\java\com\eduflex\controller\QuizController.java
-C:\Users\Aldrian Loberiano\Documents\GitHub\educational_platform\eduflex\backend\src\main\java\com\eduflex\controller\StudentController.java
-C:\Users\Aldrian Loberiano\Documents\GitHub\educational_platform\eduflex\backend\src\main\java\com\eduflex\dto\request\CourseRequest.java
-C:\Users\Aldrian Loberiano\Documents\GitHub\educational_platform\eduflex\backend\src\main\java\com\eduflex\dto\request\LessonRequest.java
-C:\Users\Aldrian Loberiano\Documents\GitHub\educational_platform\eduflex\backend\src\main\java\com\eduflex\dto\request\LoginRequest.java
-C:\Users\Aldrian Loberiano\Documents\GitHub\educational_platform\eduflex\backend\src\main\java\com\eduflex\dto\request\QuizRequest.java
-C:\Users\Aldrian Loberiano\Documents\GitHub\educational_platform\eduflex\backend\src\main\java\com\eduflex\dto\request\QuizSubmissionRequest.java
-C:\Users\Aldrian Loberiano\Documents\GitHub\educational_platform\eduflex\backend\src\main\java\com\eduflex\dto\request\RegisterRequest.java
-C:\Users\Aldrian Loberiano\Documents\GitHub\educational_platform\eduflex\backend\src\main\java\com\eduflex\dto\response\ApiResponse.java
-C:\Users\Aldrian Loberiano\Documents\GitHub\educational_platform\eduflex\backend\src\main\java\com\eduflex\dto\response\AuthResponse.java
-C:\Users\Aldrian Loberiano\Documents\GitHub\educational_platform\eduflex\backend\src\main\java\com\eduflex\dto\response\CourseResponse.java
-C:\Users\Aldrian Loberiano\Documents\GitHub\educational_platform\eduflex\backend\src\main\java\com\eduflex\dto\response\EnrollmentResponse.java
-C:\Users\Aldrian Loberiano\Documents\GitHub\educational_platform\eduflex\backend\src\main\java\com\eduflex\dto\response\LessonResponse.java
-C:\Users\Aldrian Loberiano\Documents\GitHub\educational_platform\eduflex\backend\src\main\java\com\eduflex\dto\response\ProgressResponse.java
-C:\Users\Aldrian Loberiano\Documents\GitHub\educational_platform\eduflex\backend\src\main\java\com\eduflex\dto\response\QuizAttemptResponse.java
-C:\Users\Aldrian Loberiano\Documents\GitHub\educational_platform\eduflex\backend\src\main\java\com\eduflex\dto\response\QuizResponse.java
-C:\Users\Aldrian Loberiano\Documents\GitHub\educational_platform\eduflex\backend\src\main\java\com\eduflex\dto\response\UserResponse.java
-C:\Users\Aldrian Loberiano\Documents\GitHub\educational_platform\eduflex\backend\src\main\java\com\eduflex\EduFlexApplication.java
-C:\Users\Aldrian Loberiano\Documents\GitHub\educational_platform\eduflex\backend\src\main\java\com\eduflex\exception\BadRequestException.java
-C:\Users\Aldrian Loberiano\Documents\GitHub\educational_platform\eduflex\backend\src\main\java\com\eduflex\exception\GlobalExceptionHandler.java
-C:\Users\Aldrian Loberiano\Documents\GitHub\educational_platform\eduflex\backend\src\main\java\com\eduflex\exception\ResourceNotFoundException.java
-C:\Users\Aldrian Loberiano\Documents\GitHub\educational_platform\eduflex\backend\src\main\java\com\eduflex\model\entity\Course.java
-C:\Users\Aldrian Loberiano\Documents\GitHub\educational_platform\eduflex\backend\src\main\java\com\eduflex\model\entity\Enrollment.java
-C:\Users\Aldrian Loberiano\Documents\GitHub\educational_platform\eduflex\backend\src\main\java\com\eduflex\model\entity\Lesson.java
-C:\Users\Aldrian Loberiano\Documents\GitHub\educational_platform\eduflex\backend\src\main\java\com\eduflex\model\entity\Progress.java
-C:\Users\Aldrian Loberiano\Documents\GitHub\educational_platform\eduflex\backend\src\main\java\com\eduflex\model\entity\Quiz.java
-C:\Users\Aldrian Loberiano\Documents\GitHub\educational_platform\eduflex\backend\src\main\java\com\eduflex\model\entity\QuizAnswer.java
-C:\Users\Aldrian Loberiano\Documents\GitHub\educational_platform\eduflex\backend\src\main\java\com\eduflex\model\entity\QuizAttempt.java
-C:\Users\Aldrian Loberiano\Documents\GitHub\educational_platform\eduflex\backend\src\main\java\com\eduflex\model\entity\QuizOption.java
-C:\Users\Aldrian Loberiano\Documents\GitHub\educational_platform\eduflex\backend\src\main\java\com\eduflex\model\entity\QuizQuestion.java
-C:\Users\Aldrian Loberiano\Documents\GitHub\educational_platform\eduflex\backend\src\main\java\com\eduflex\model\entity\User.java
-C:\Users\Aldrian Loberiano\Documents\GitHub\educational_platform\eduflex\backend\src\main\java\com\eduflex\model\enums\LessonType.java
-C:\Users\Aldrian Loberiano\Documents\GitHub\educational_platform\eduflex\backend\src\main\java\com\eduflex\model\enums\QuestionType.java
-C:\Users\Aldrian Loberiano\Documents\GitHub\educational_platform\eduflex\backend\src\main\java\com\eduflex\model\enums\UserRole.java
-C:\Users\Aldrian Loberiano\Documents\GitHub\educational_platform\eduflex\backend\src\main\java\com\eduflex\model\enums\UserStatus.java
-C:\Users\Aldrian Loberiano\Documents\GitHub\educational_platform\eduflex\backend\src\main\java\com\eduflex\repository\CourseRepository.java
-C:\Users\Aldrian Loberiano\Documents\GitHub\educational_platform\eduflex\backend\src\main\java\com\eduflex\repository\EnrollmentRepository.java
-C:\Users\Aldrian Loberiano\Documents\GitHub\educational_platform\eduflex\backend\src\main\java\com\eduflex\repository\LessonRepository.java
-C:\Users\Aldrian Loberiano\Documents\GitHub\educational_platform\eduflex\backend\src\main\java\com\eduflex\repository\ProgressRepository.java
-C:\Users\Aldrian Loberiano\Documents\GitHub\educational_platform\eduflex\backend\src\main\java\com\eduflex\repository\QuizAttemptRepository.java
-C:\Users\Aldrian Loberiano\Documents\GitHub\educational_platform\eduflex\backend\src\main\java\com\eduflex\repository\QuizRepository.java
-C:\Users\Aldrian Loberiano\Documents\GitHub\educational_platform\eduflex\backend\src\main\java\com\eduflex\repository\UserRepository.java
-C:\Users\Aldrian Loberiano\Documents\GitHub\educational_platform\eduflex\backend\src\main\java\com\eduflex\security\CustomUserDetailsService.java
-C:\Users\Aldrian Loberiano\Documents\GitHub\educational_platform\eduflex\backend\src\main\java\com\eduflex\security\JwtAuthenticationFilter.java
-C:\Users\Aldrian Loberiano\Documents\GitHub\educational_platform\eduflex\backend\src\main\java\com\eduflex\security\JwtUtil.java
-C:\Users\Aldrian Loberiano\Documents\GitHub\educational_platform\eduflex\backend\src\main\java\com\eduflex\service\AuthService.java
-C:\Users\Aldrian Loberiano\Documents\GitHub\educational_platform\eduflex\backend\src\main\java\com\eduflex\service\CourseService.java
-C:\Users\Aldrian Loberiano\Documents\GitHub\educational_platform\eduflex\backend\src\main\java\com\eduflex\service\EnrollmentService.java
-C:\Users\Aldrian Loberiano\Documents\GitHub\educational_platform\eduflex\backend\src\main\java\com\eduflex\service\LessonService.java
-C:\Users\Aldrian Loberiano\Documents\GitHub\educational_platform\eduflex\backend\src\main\java\com\eduflex\service\ProgressService.java
-C:\Users\Aldrian Loberiano\Documents\GitHub\educational_platform\eduflex\backend\src\main\java\com\eduflex\service\QuizService.java
-C:\Users\Aldrian Loberiano\Documents\GitHub\educational_platform\eduflex\backend\src\main\java\com\eduflex\service\UserService.java
+C:\eduflex\backend\src\main\java\com\eduflex\config\CorsConfig.java
+C:\eduflex\backend\src\main\java\com\eduflex\config\DataInitializer.java
+C:\eduflex\backend\src\main\java\com\eduflex\config\SecurityConfig.java
+C:\eduflex\backend\src\main\java\com\eduflex\controller\AdminController.java
+C:\eduflex\backend\src\main\java\com\eduflex\controller\AuthController.java
+C:\eduflex\backend\src\main\java\com\eduflex\controller\CourseController.java
+C:\eduflex\backend\src\main\java\com\eduflex\controller\HealthController.java
+C:\eduflex\backend\src\main\java\com\eduflex\controller\InstructorController.java
+C:\eduflex\backend\src\main\java\com\eduflex\controller\QuizController.java
+C:\eduflex\backend\src\main\java\com\eduflex\controller\StudentController.java
+C:\eduflex\backend\src\main\java\com\eduflex\dto\request\CourseRequest.java
+C:\eduflex\backend\src\main\java\com\eduflex\dto\request\LessonRequest.java
+C:\eduflex\backend\src\main\java\com\eduflex\dto\request\LoginRequest.java
+C:\eduflex\backend\src\main\java\com\eduflex\dto\request\QuizRequest.java
+C:\eduflex\backend\src\main\java\com\eduflex\dto\request\QuizSubmissionRequest.java
+C:\eduflex\backend\src\main\java\com\eduflex\dto\request\RegisterRequest.java
+C:\eduflex\backend\src\main\java\com\eduflex\dto\response\ApiResponse.java
+C:\eduflex\backend\src\main\java\com\eduflex\dto\response\AuthResponse.java
+C:\eduflex\backend\src\main\java\com\eduflex\dto\response\CourseResponse.java
+C:\eduflex\backend\src\main\java\com\eduflex\dto\response\EnrollmentResponse.java
+C:\eduflex\backend\src\main\java\com\eduflex\dto\response\LessonResponse.java
+C:\eduflex\backend\src\main\java\com\eduflex\dto\response\ProgressResponse.java
+C:\eduflex\backend\src\main\java\com\eduflex\dto\response\QuizAttemptResponse.java
+C:\eduflex\backend\src\main\java\com\eduflex\dto\response\QuizResponse.java
+C:\eduflex\backend\src\main\java\com\eduflex\dto\response\UserResponse.java
+C:\eduflex\backend\src\main\java\com\eduflex\EduFlexApplication.java
+C:\eduflex\backend\src\main\java\com\eduflex\exception\BadRequestException.java
+C:\eduflex\backend\src\main\java\com\eduflex\exception\GlobalExceptionHandler.java
+C:\eduflex\backend\src\main\java\com\eduflex\exception\ResourceNotFoundException.java
+C:\eduflex\backend\src\main\java\com\eduflex\model\entity\Course.java
+C:\eduflex\backend\src\main\java\com\eduflex\model\entity\Enrollment.java
+C:\eduflex\backend\src\main\java\com\eduflex\model\entity\Lesson.java
+C:\eduflex\backend\src\main\java\com\eduflex\model\entity\Progress.java
+C:\eduflex\backend\src\main\java\com\eduflex\model\entity\Quiz.java
+C:\eduflex\backend\src\main\java\com\eduflex\model\entity\QuizAnswer.java
+C:\eduflex\backend\src\main\java\com\eduflex\model\entity\QuizAttempt.java
+C:\eduflex\backend\src\main\java\com\eduflex\model\entity\QuizOption.java
+C:\eduflex\backend\src\main\java\com\eduflex\model\entity\QuizQuestion.java
+C:\eduflex\backend\src\main\java\com\eduflex\model\entity\User.java
+C:\eduflex\backend\src\main\java\com\eduflex\model\enums\LessonType.java
+C:\eduflex\backend\src\main\java\com\eduflex\model\enums\QuestionType.java
+C:\eduflex\backend\src\main\java\com\eduflex\model\enums\UserRole.java
+C:\eduflex\backend\src\main\java\com\eduflex\model\enums\UserStatus.java
+C:\eduflex\backend\src\main\java\com\eduflex\repository\CourseRepository.java
+C:\eduflex\backend\src\main\java\com\eduflex\repository\EnrollmentRepository.java
+C:\eduflex\backend\src\main\java\com\eduflex\repository\LessonRepository.java
+C:\eduflex\backend\src\main\java\com\eduflex\repository\ProgressRepository.java
+C:\eduflex\backend\src\main\java\com\eduflex\repository\QuizAttemptRepository.java
+C:\eduflex\backend\src\main\java\com\eduflex\repository\QuizRepository.java
+C:\eduflex\backend\src\main\java\com\eduflex\repository\UserRepository.java
+C:\eduflex\backend\src\main\java\com\eduflex\security\CustomUserDetailsService.java
+C:\eduflex\backend\src\main\java\com\eduflex\security\JwtAuthenticationFilter.java
+C:\eduflex\backend\src\main\java\com\eduflex\security\JwtUtil.java
+C:\eduflex\backend\src\main\java\com\eduflex\service\AuthService.java
+C:\eduflex\backend\src\main\java\com\eduflex\service\CourseService.java
+C:\eduflex\backend\src\main\java\com\eduflex\service\EnrollmentService.java
+C:\eduflex\backend\src\main\java\com\eduflex\service\LessonService.java
+C:\eduflex\backend\src\main\java\com\eduflex\service\ProgressService.java
+C:\eduflex\backend\src\main\java\com\eduflex\service\QuizService.java
+C:\eduflex\backend\src\main\java\com\eduflex\service\UserService.java

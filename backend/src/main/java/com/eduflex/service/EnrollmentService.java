@@ -67,6 +67,13 @@ public class EnrollmentService {
     }
 
     @Transactional(readOnly = true)
+    public List<EnrollmentResponse> getAllEnrollments() {
+        return enrollmentRepository.findAll().stream()
+                .map(this::mapToEnrollmentResponse)
+                .collect(Collectors.toList());
+    }
+
+    @Transactional(readOnly = true)
     public List<EnrollmentResponse> getCourseEnrollments(Long courseId) {
         return enrollmentRepository.findByCourseId(courseId).stream()
                 .map(this::mapToEnrollmentResponse)
@@ -109,7 +116,8 @@ public class EnrollmentService {
                 .courseId(enrollment.getCourse().getId())
                 .courseTitle(enrollment.getCourse().getTitle())
                 .courseCategory(
-                        enrollment.getCourse().getCategory() != null ? enrollment.getCourse().getCategory().toString()
+                        enrollment.getCourse().getCategory() != null
+                                ? enrollment.getCourse().getCategory()
                                 : "UNCATEGORIZED")
                 .progressPercentage(enrollment.getProgressPercentage())
                 .enrolledAt(enrollment.getEnrolledAt())

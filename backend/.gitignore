@@ -26,3 +26,20 @@ Thumbs.db
 
 # Application properties (for sensitive data)
 application-local.yml
+application-prod.yml
+src/main/resources/application-*.yml
+*.properties
+
+# Security and credentials
+*.key
+*.pem
+*.p12
+*.jks
+
+# Database files
+*.db
+*.sqlite
+
+# Temp files
+*.tmp
+*.temp

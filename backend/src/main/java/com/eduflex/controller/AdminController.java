@@ -1,9 +1,11 @@
 package com.eduflex.controller;
 
 import com.eduflex.dto.response.ApiResponse;
+import com.eduflex.dto.response.EnrollmentResponse;
 import com.eduflex.dto.response.UserResponse;
 import com.eduflex.model.enums.UserRole;
 import com.eduflex.model.enums.UserStatus;
+import com.eduflex.service.EnrollmentService;
 import com.eduflex.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -19,6 +21,7 @@ import java.util.List;
 public class AdminController {
 
     private final UserService userService;
+    private final EnrollmentService enrollmentService;
 
     @GetMapping("/users")
     public ResponseEntity<ApiResponse<List<UserResponse>>> getAllUsers() {
@@ -56,5 +59,11 @@ public class AdminController {
     public ResponseEntity<ApiResponse<Void>> deleteUser(@PathVariable Long userId) {
         userService.deleteUser(userId);
         return ResponseEntity.ok(ApiResponse.success("User deleted successfully", null));
+    }
+
+    @GetMapping("/enrollments")
+    public ResponseEntity<ApiResponse<List<EnrollmentResponse>>> getAllEnrollments() {
+        List<EnrollmentResponse> enrollments = enrollmentService.getAllEnrollments();
+        return ResponseEntity.ok(ApiResponse.success(enrollments));
     }
 }

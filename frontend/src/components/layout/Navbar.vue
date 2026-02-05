@@ -3,28 +3,21 @@
     <div class="nav-container">
       <div class="nav-left">
         <router-link to="/" class="nav-brand">
-          EduFlex
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="capGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#5B6FE3;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#FB7D5B;stop-opacity:1" />
+              </linearGradient>
+            </defs>
+            <path d="M16 2L2 10v3h28v-3L16 2z" fill="url(#capGradient)"/>
+            <rect x="14" y="13" width="4" height="17" fill="#5B6FE3"/>
+            <path d="M8 16h16v2H8z" fill="#FCC43E"/>
+          </svg>
         </router-link>
       </div>
 
       <div class="nav-center">
-        <router-link to="/" class="nav-link">Home</router-link>
-        <router-link to="/courses" class="nav-link">Courses</router-link>
-        
-        <template v-if="authStore.isAuthenticated">
-          <router-link v-if="authStore.isStudent" to="/my-learning" class="nav-link">
-            My Learning
-          </router-link>
-          <router-link v-if="authStore.isInstructor" to="/instructor/dashboard" class="nav-link">
-            Dashboard
-          </router-link>
-          <router-link v-if="authStore.isInstructor" to="/instructor/courses" class="nav-link">
-            My Courses
-          </router-link>
-          <router-link v-if="authStore.isAdmin" to="/admin/dashboard" class="nav-link">
-            Dashboard
-          </router-link>
-        </template>
       </div>
 
       <div class="nav-right">
@@ -64,7 +57,12 @@
     <!-- Success Message Modal -->
     <div v-if="showSuccessModal" class="modal-overlay" @click="showSuccessModal = false">
       <div class="modal-content success-modal" @click.stop>
-        <div class="success-icon">✓</div>
+        <div class="success-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="10" stroke="#27ae60" stroke-width="2" fill="none"/>
+            <path d="M8 12l3 3 5-6" stroke="#27ae60" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
         <h3>Logged Out Successfully</h3>
         <p>See you soon!</p>
         <button @click="showSuccessModal = false" class="btn btn-primary">Close</button>
@@ -120,7 +118,7 @@ import { useAuthStore } from '../../stores/auth'
 
 const router = useRouter()
 const authStore = useAuthStore()
-const emit = defineEmits(['open-login', 'open-register'])
+const emit = defineEmits(['open-login', 'open-register', 'toggle-sidebar'])
 
 const showLogoutModal = ref(false)
 const showSuccessModal = ref(false)
@@ -182,23 +180,21 @@ function saveProfile() {
 
 <style scoped>
 .navbar {
-  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
-  box-shadow: 0 4px 20px rgba(0, 212, 255, 0.1);
-  border-bottom: 1px solid rgba(0, 212, 255, 0.2);
-  position: fixed;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 1rem 0;
+  position: sticky;
   top: 0;
-  left: 0;
-  right: 0;
-  z-index: 900;
-  backdrop-filter: blur(10px);
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
 }
 
 .nav-container {
-  max-width: 1600px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 15px 20px;
+  padding: 0 2rem;
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  grid-template-columns: 1fr 2fr 1fr;
   align-items: center;
   gap: 20px;
 }
@@ -209,19 +205,35 @@ function saveProfile() {
   gap: 15px;
 }
 
+.hamburger-btn {
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.hamburger-btn:hover {
+  background: #f3f4f6;
+}
 
 .nav-brand {
   font-size: 24px;
   font-weight: 700;
-  background: linear-gradient(135deg, #00d4ff 0%, #0099ff 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #1f2937;
   text-decoration: none;
   display: flex;
   align-items: center;
   gap: 8px;
-  filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.3));
+  transition: color 0.3s ease;
+}
+
+.nav-brand:hover {
+  color: #5B6FE3;
 }
 
 .brand-icon {
@@ -244,7 +256,7 @@ function saveProfile() {
 
 
 .nav-link {
-  color: #e0e0e0;
+  color: #6b7280;
   text-decoration: none;
   font-weight: 500;
   transition: all 0.3s ease;
@@ -252,12 +264,11 @@ function saveProfile() {
 }
 
 .nav-link:hover {
-  color: #00d4ff;
-  text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+  color: #5B6FE3;
 }
 
 .nav-link.router-link-active {
-  color: #00d4ff;
+  color: #5B6FE3;
 }
 
 .nav-link.router-link-active::after {
@@ -267,8 +278,7 @@ function saveProfile() {
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg, transparent, #00d4ff, transparent);
-  box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+  background: #5B6FE3;
 }
 
 .nav-user {
@@ -282,27 +292,26 @@ function saveProfile() {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #00d4ff 0%, #0099ff 100%);
+  background: #5B6FE3;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 700;
   color: white;
   font-size: 14px;
-  box-shadow: 0 2px 10px rgba(0, 212, 255, 0.3);
+  box-shadow: 0 2px 8px rgba(91, 111, 227, 0.3);
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .user-avatar:hover {
   transform: scale(1.1);
-  box-shadow: 0 4px 20px rgba(0, 212, 255, 0.5);
+  box-shadow: 0 4px 12px rgba(91, 111, 227, 0.4);
 }
 
 .user-name {
   font-weight: 500;
-  color: #00d4ff;
-  text-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+  color: #1f2937;
 }
 
 .modal-overlay {
@@ -321,13 +330,13 @@ function saveProfile() {
 }
 
 .modal-content {
-  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+  background: #ffffff;
   border-radius: 16px;
   padding: 30px;
   max-width: 400px;
   width: 90%;
-  box-shadow: 0 20px 60px rgba(0, 212, 255, 0.3);
-  border: 1px solid rgba(0, 212, 255, 0.3);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e5e7eb;
   animation: modalSlideIn 0.3s ease-out;
   margin: auto;
   position: relative;
@@ -345,7 +354,7 @@ function saveProfile() {
 }
 
 .modal-header h3 {
-  color: #fff;
+  color: #1f2937;
   font-size: 24px;
   margin: 0 0 20px 0;
 }
@@ -355,14 +364,14 @@ function saveProfile() {
 }
 
 .modal-body p {
-  color: #e0e0e0;
+  color: #6b7280;
   font-size: 16px;
   line-height: 1.6;
   margin: 0;
 }
 
 .modal-body strong {
-  color: #00d4ff;
+  color: #5B6FE3;
 }
 
 .modal-actions {
@@ -376,7 +385,7 @@ function saveProfile() {
 }
 
 .btn-danger {
-  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  background: #ef4444;
   color: white;
   border: none;
   padding: 12px 24px;
@@ -387,8 +396,9 @@ function saveProfile() {
 }
 
 .btn-danger:hover {
+  background: #dc2626;
   transform: translateY(-2px);
-  box-shadow: 0 4px 20px rgba(239, 68, 68, 0.4);
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
 }
 
 .success-modal {
@@ -398,7 +408,7 @@ function saveProfile() {
 .success-icon {
   width: 80px;
   height: 80px;
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  background: #10b981;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -406,7 +416,7 @@ function saveProfile() {
   font-size: 48px;
   color: white;
   margin: 0 auto 20px;
-  box-shadow: 0 10px 30px rgba(16, 185, 129, 0.4);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
   animation: successPulse 0.6s ease-out;
 }
 
@@ -423,13 +433,13 @@ function saveProfile() {
 }
 
 .success-modal h3 {
-  color: #fff;
+  color: #1f2937;
   font-size: 24px;
   margin: 0 0 10px 0;
 }
 
 .success-modal p {
-  color: #888;
+  color: #6b7280;
   font-size: 16px;
   margin: 0 0 25px 0;
 }
@@ -453,7 +463,7 @@ function saveProfile() {
 .close-btn {
   background: none;
   border: none;
-  color: #888;
+  color: #6b7280;
   font-size: 32px;
   cursor: pointer;
   line-height: 1;
@@ -464,21 +474,21 @@ function saveProfile() {
 }
 
 .close-btn:hover {
-  color: #00d4ff;
+  color: #5B6FE3;
 }
 
 .profile-avatar-large {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #00d4ff 0%, #0099ff 100%);
+  background: #5B6FE3;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 700;
   color: white;
   font-size: 36px;
-  box-shadow: 0 4px 20px rgba(0, 212, 255, 0.4);
+  box-shadow: 0 4px 12px rgba(91, 111, 227, 0.3);
   margin: 0 auto 30px;
 }
 
@@ -488,7 +498,7 @@ function saveProfile() {
 
 .form-group label {
   display: block;
-  color: #e0e0e0;
+  color: #374151;
   font-weight: 500;
   margin-bottom: 8px;
   font-size: 14px;
@@ -497,18 +507,18 @@ function saveProfile() {
 .form-control {
   width: 100%;
   padding: 12px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(0, 212, 255, 0.3);
+  background: #f9fafb;
+  border: 1px solid #d1d5db;
   border-radius: 8px;
-  color: #fff;
+  color: #1f2937;
   font-size: 14px;
   transition: all 0.3s ease;
 }
 
 .form-control:focus {
   outline: none;
-  border-color: #00d4ff;
-  box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.1);
+  border-color: #5B6FE3;
+  box-shadow: 0 0 0 3px rgba(91, 111, 227, 0.1);
 }
 
 .form-control:disabled {
@@ -520,5 +530,22 @@ function saveProfile() {
   display: block;
   margin-top: 5px;
   font-size: 12px;
+  color: #6b7280;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .nav-container {
+    padding: 0 15px;
+  }
+  
+  .user-name {
+    display: none;
+  }
+  
+  .btn {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
 }
 </style>

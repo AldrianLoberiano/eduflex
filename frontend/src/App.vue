@@ -1,6 +1,11 @@
 <template>
   <div id="app">
-    <div class="app-main">
+    <Sidebar 
+      v-if="currentRoute !== '/'"
+      @open-login="showLogin = true" 
+      @open-register="showRegister = true"
+    />
+    <div class="app-main" :class="{ 'no-sidebar': currentRoute === '/' }">
       <Navbar 
         @open-login="showLogin = true" 
         @open-register="showRegister = true"
@@ -8,7 +13,6 @@
       <main class="main-content">
         <router-view @open-register="showRegister = true" />
       </main>
-      <Footer />
     </div>
     
     <!-- Modals -->
@@ -26,14 +30,17 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
+import { useRoute } from 'vue-router'
+import Sidebar from './components/layout/Sidebar.vue'
 import Navbar from './components/layout/Navbar.vue'
-import Footer from './components/layout/Footer.vue'
 import LoginModal from './components/LoginModal.vue'
 import RegisterModal from './components/RegisterModal.vue'
 
 const showLogin = ref(false)
 const showRegister = ref(false)
+const route = useRoute()
+const currentRoute = computed(() => route.path)
 </script>
 
 <style>
@@ -46,7 +53,7 @@ const showRegister = ref(false)
 #app {
   min-height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
   font-size: 20px;
@@ -59,8 +66,12 @@ const showRegister = ref(false)
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 2200px;
-  margin: 0 auto;
+  margin-left: 260px;
+  transition: margin-left 0.3s ease;
+}
+
+.app-main.no-sidebar {
+  margin-left: 0;
 }
 
 .main-content {
@@ -70,6 +81,17 @@ const showRegister = ref(false)
   margin: 60px auto 0;
   width: 100%;
   box-sizing: border-box;
+}
+
+@media (max-width: 767px) {
+  .app-main {
+    margin-left: 0;
+  }
+  
+  .main-content {
+    padding: 20px 15px;
+    margin-top: 80px;
+  }
 }
 
 /* Card styling */
@@ -117,15 +139,15 @@ const showRegister = ref(false)
 }
 
 /* Responsive padding */
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .main-content {
-    padding: 90px 80px;
+    padding: 60px 40px;
   }
 }
 
 @media (min-width: 1024px) {
   .main-content {
-    padding: 110px 100px;
+    padding: 90px 70px;
   }
 }
 

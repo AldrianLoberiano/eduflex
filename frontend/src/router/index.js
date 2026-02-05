@@ -93,6 +93,120 @@ const routes = [
     component: () => import('../views/admin/Profile.vue'),
     meta: { requiresAuth: true, role: 'ADMIN' }
   },
+  // User Management
+  {
+    path: '/admin/users',
+    name: 'UserManagement',
+    component: () => import('../views/admin/UserManagement.vue'),
+    meta: { requiresAuth: true, role: 'ADMIN' }
+  },
+  {
+    path: '/admin/users/approvals',
+    name: 'UserApprovals',
+    component: () => import('../views/admin/UserApprovals.vue'),
+    meta: { requiresAuth: true, role: 'ADMIN' }
+  },
+  // Course Management
+  {
+    path: '/admin/courses',
+    name: 'AdminCourses',
+    component: () => import('../views/admin/CourseManagement.vue'),
+    meta: { requiresAuth: true, role: 'ADMIN' }
+  },
+  {
+    path: '/admin/courses/categories',
+    name: 'CourseCategories',
+    component: () => import('../views/admin/CourseCategories.vue'),
+    meta: { requiresAuth: true, role: 'ADMIN' }
+  },
+  // Module Management
+  {
+    path: '/admin/modules',
+    name: 'ModuleManagement',
+    component: () => import('../views/admin/ModuleManagement.vue'),
+    meta: { requiresAuth: true, role: 'ADMIN' }
+  },
+  // Content Management
+  {
+    path: '/admin/content',
+    name: 'ContentManagement',
+    component: () => import('../views/admin/ContentManagement.vue'),
+    meta: { requiresAuth: true, role: 'ADMIN' }
+  },
+  // Enrollment Management
+  {
+    path: '/admin/enrollments',
+    name: 'EnrollmentManagement',
+    component: () => import('../views/admin/EnrollmentManagement.vue'),
+    meta: { requiresAuth: true, role: 'ADMIN' }
+  },
+  // Assessment & Grading
+  {
+    path: '/admin/assessments',
+    name: 'AssessmentManagement',
+    component: () => import('../views/admin/AssessmentManagement.vue'),
+    meta: { requiresAuth: true, role: 'ADMIN' }
+  },
+  {
+    path: '/admin/grading',
+    name: 'GradingManagement',
+    component: () => import('../views/admin/GradingManagement.vue'),
+    meta: { requiresAuth: true, role: 'ADMIN' }
+  },
+  // Attendance
+  {
+    path: '/admin/attendance',
+    name: 'AttendanceManagement',
+    component: () => import('../views/admin/AttendanceManagement.vue'),
+    meta: { requiresAuth: true, role: 'ADMIN' }
+  },
+  // Communications
+  {
+    path: '/admin/communications',
+    name: 'Communications',
+    component: () => import('../views/admin/Communications.vue'),
+    meta: { requiresAuth: true, role: 'ADMIN' }
+  },
+  {
+    path: '/admin/announcements',
+    name: 'Announcements',
+    component: () => import('../views/admin/Announcements.vue'),
+    meta: { requiresAuth: true, role: 'ADMIN' }
+  },
+  // Reports & Analytics
+  {
+    path: '/admin/reports',
+    name: 'Reports',
+    component: () => import('../views/admin/Reports.vue'),
+    meta: { requiresAuth: true, role: 'ADMIN' }
+  },
+  // Payments
+  {
+    path: '/admin/payments',
+    name: 'Payments',
+    component: () => import('../views/admin/Payments.vue'),
+    meta: { requiresAuth: true, role: 'ADMIN' }
+  },
+  {
+    path: '/admin/subscriptions',
+    name: 'Subscriptions',
+    component: () => import('../views/admin/Subscriptions.vue'),
+    meta: { requiresAuth: true, role: 'ADMIN' }
+  },
+  // Content Moderation
+  {
+    path: '/admin/moderation',
+    name: 'ContentModeration',
+    component: () => import('../views/admin/ContentModeration.vue'),
+    meta: { requiresAuth: true, role: 'ADMIN' }
+  },
+  // System Settings
+  {
+    path: '/admin/settings',
+    name: 'SystemSettings',
+    component: () => import('../views/admin/SystemSettings.vue'),
+    meta: { requiresAuth: true, role: 'ADMIN' }
+  },
   {
     path: '/courses/:courseId/quizzes',
     name: 'CourseQuizzes',

@@ -5,7 +5,13 @@
 
     <div class="stats-grid grid grid-4">
       <div class="stat-card card">
-        <div class="stat-icon" style="background: #3498db;">👥</div>
+        <div class="stat-icon" style="background: #3498db;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="9" cy="7" r="4" stroke="white" stroke-width="2"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="white" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
         <div class="stat-info">
           <h3>Total Users</h3>
           <p class="stat-value">{{ stats.totalUsers }}</p>
@@ -14,7 +20,12 @@
       </div>
 
       <div class="stat-card card">
-        <div class="stat-icon" style="background: #9b59b6;">📚</div>
+        <div class="stat-icon" style="background: #9b59b6;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" stroke="white" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
         <div class="stat-info">
           <h3>Total Courses</h3>
           <p class="stat-value">{{ stats.totalCourses }}</p>
@@ -23,7 +34,12 @@
       </div>
 
       <div class="stat-card card">
-        <div class="stat-icon" style="background: #27ae60;">✅</div>
+        <div class="stat-icon" style="background: #27ae60;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M9 12l2 2 4-4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="12" cy="12" r="10" stroke="white" stroke-width="2"/>
+          </svg>
+        </div>
         <div class="stat-info">
           <h3>Active Enrollments</h3>
           <p class="stat-value">{{ stats.activeEnrollments }}</p>
@@ -32,7 +48,12 @@
       </div>
 
       <div class="stat-card card">
-        <div class="stat-icon" style="background: #e74c3c;">📝</div>
+        <div class="stat-icon" style="background: #e74c3c;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M9 11l3 3L22 4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" stroke="white" stroke-width="2"/>
+          </svg>
+        </div>
         <div class="stat-info">
           <h3>Total Quizzes</h3>
           <p class="stat-value">{{ stats.totalQuizzes }}</p>
@@ -163,7 +184,7 @@ async function loadStats() {
 
     // Get enrollments (if API exists)
     try {
-      const enrollRes = await axios.get('http://localhost:8080/api/enrollments', {
+      const enrollRes = await axios.get('http://localhost:8080/api/admin/enrollments', {
         headers: { Authorization: `Bearer ${token}` }
       })
       stats.value.activeEnrollments = enrollRes.data.data.length

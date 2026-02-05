@@ -26,28 +26,41 @@
 
           <div class="course-stats">
             <div class="stat">
-              <span class="stat-icon">👤</span>
+              <svg class="stat-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="8" r="5" stroke="currentColor" stroke-width="2"/>
+                <path d="M20 21a8 8 0 1 0-16 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
               <div>
                 <div class="stat-value">{{ course.instructorName }}</div>
                 <div class="stat-label">Instructor</div>
               </div>
             </div>
             <div class="stat">
-              <span class="stat-icon">👥</span>
+              <svg class="stat-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
               <div>
                 <div class="stat-value">{{ course.enrollmentCount || 0 }}</div>
                 <div class="stat-label">Students</div>
               </div>
             </div>
             <div class="stat">
-              <span class="stat-icon">📖</span>
+              <svg class="stat-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
               <div>
                 <div class="stat-value">{{ course.lessonCount || 0 }}</div>
                 <div class="stat-label">Lessons</div>
               </div>
             </div>
             <div v-if="course.duration" class="stat">
-              <span class="stat-icon">⏱️</span>
+              <svg class="stat-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
               <div>
                 <div class="stat-value">{{ course.duration }}h</div>
                 <div class="stat-label">Duration</div>
