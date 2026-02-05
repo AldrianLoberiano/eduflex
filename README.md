@@ -160,7 +160,7 @@ spring:
     show-sql: true
 ```
 
-**Important:** Update the password in `application.yml` to match your PostgreSQL installation.
+**⚠️ Important:** Update the password in `application.yml` to match your PostgreSQL installation.
 
 ### Database Schema
 
@@ -857,14 +857,14 @@ We welcome contributions! Please follow these steps:
 
 ---
 
-## License
+## 📝 License
 
 This project is part of the EduFlex educational platform.  
 © 2026 EduFlex. All rights reserved.
 
 ---
 
-## Support & Contact
+## 📞 Support & Contact
 
 - **Issues:** [GitHub Issues](https://github.com/yourusername/eduflex/issues)
 - **Documentation:** Check our [Wiki](https://github.com/yourusername/eduflex/wiki)
@@ -872,38 +872,37 @@ This project is part of the EduFlex educational platform.
 
 ---
 
-## Roadmap
+## 🎯 Roadmap
 
 ### Phase 1 (Current)
 
-- [x] User authentication and authorization
-- [x] Course management system
-- [x] Quiz creation and taking
-- [x] Progress tracking
-- [x] Role-based access control
-- [x] Comprehensive admin panel with 13 features
+- ✅ User authentication and authorization
+- ✅ Course management system
+- ✅ Quiz creation and taking
+- ✅ Progress tracking
+- ✅ Role-based access control
 
 ### Phase 2 (In Progress)
 
-- [ ] Video lesson support
-- [ ] File upload for course materials
-- [ ] Discussion forums
-- [ ] Real-time notifications
-- [ ] Certificate generation
+- 🔄 Video lesson support
+- 🔄 File upload for course materials
+- 🔄 Discussion forums
+- 🔄 Real-time notifications
+- 🔄 Certificate generation
 
 ### Phase 3 (Planned)
 
-- [ ] Live streaming classes
-- [ ] Payment integration
-- [ ] Mobile app (React Native)
-- [ ] Advanced analytics and reporting
-- [ ] Gamification features
-- [ ] Multi-language support
-- [ ] AI-powered recommendations
+- 📋 Live streaming classes
+- 📋 Payment integration
+- 📋 Mobile app (React Native)
+- 📋 Advanced analytics and reporting
+- 📋 Gamification features
+- 📋 Multi-language support
+- 📋 AI-powered recommendations
 
 ---
 
-## Acknowledgments
+## 🙏 Acknowledgments
 
 - **Spring Boot** - Backend framework
 - **Vue.js** - Frontend framework
@@ -914,4 +913,4 @@ This project is part of the EduFlex educational platform.
 
 ---
 
-**Built with care by the EduFlex Team**
+**Built with ❤️ by the EduFlex Team**
