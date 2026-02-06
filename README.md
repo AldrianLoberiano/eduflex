@@ -857,52 +857,44 @@ We welcome contributions! Please follow these steps:
 
 ---
 
-## 📝 License
+## License
 
 This project is part of the EduFlex educational platform.  
 © 2026 EduFlex. All rights reserved.
 
 ---
 
-## 📞 Support & Contact
-
-- **Issues:** [GitHub Issues](https://github.com/yourusername/eduflex/issues)
-- **Documentation:** Check our [Wiki](https://github.com/yourusername/eduflex/wiki)
-- **Email:** support@eduflex.com
-
----
-
-## 🎯 Roadmap
+##  Roadmap
 
 ### Phase 1 (Current)
 
-- ✅ User authentication and authorization
-- ✅ Course management system
-- ✅ Quiz creation and taking
-- ✅ Progress tracking
-- ✅ Role-based access control
+-  User authentication and authorization
+-  Course management system
+-  Quiz creation and taking
+-  Progress tracking
+-  Role-based access control
 
 ### Phase 2 (In Progress)
 
-- 🔄 Video lesson support
-- 🔄 File upload for course materials
-- 🔄 Discussion forums
-- 🔄 Real-time notifications
-- 🔄 Certificate generation
+-  Video lesson support
+-  File upload for course materials
+-  Discussion forums
+-  Real-time notifications
+-  Certificate generation
 
 ### Phase 3 (Planned)
 
-- 📋 Live streaming classes
-- 📋 Payment integration
-- 📋 Mobile app (React Native)
-- 📋 Advanced analytics and reporting
-- 📋 Gamification features
-- 📋 Multi-language support
-- 📋 AI-powered recommendations
+-  Live streaming classes
+-  Payment integration
+-  Mobile app (React Native)
+-  Advanced analytics and reporting
+-  Gamification features
+-  Multi-language support
+-  AI-powered recommendations
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - **Spring Boot** - Backend framework
 - **Vue.js** - Frontend framework
